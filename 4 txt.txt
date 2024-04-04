@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <math.h>
+
+#define PI 3.14159265358979323846
+
+void calcularAreaVolumeEsfera(double raio, double *areaSuperficie, double *volume) {
+    // Calcula a área da superfície
+    *areaSuperficie = 4 * PI * pow(raio, 2);
+
+    // Calcula o volume
+    *volume = (4.0 / 3) * PI * pow(raio, 3);
+}
+
+int main() {
+    double raio, areaSuperficie, volume;
+
+    // Solicita ao usuário que insira o raio da esfera
+    printf("Digite o raio da esfera: ");
+    scanf("%lf", &raio);
+
+    // Chama a função para calcular a área da superfície e o volume da esfera
+    calcularAreaVolumeEsfera(raio, &areaSuperficie, &volume);
+
+    // Imprime os resultados
+    printf("Area da superficie: %.2f\n", areaSuperficie);
+    printf("Volume: %.2f\n", volume);
+
+    return 0;
+}
+

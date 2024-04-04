@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int var1, var2;
+    int *ptr1, *ptr2;
+
+    // Lê os valores das variáveis do teclado
+    printf("Digite o valor da primeira variavel: ");
+    scanf("%d", &var1);
+
+    printf("Digite o valor da segunda variavel: ");
+    scanf("%d", &var2);
+
+    // Obtém os endereços das variáveis
+    ptr1 = &var1;
+    ptr2 = &var2;
+
+    // Compara os endereços e exibe o conteúdo do maior endereço
+    if (ptr1 > ptr2) {
+        printf("Conteudo do endereço com maior valor: %d\n", *ptr1);
+    } else {
+        printf("Conteudo do endereço com maior valor: %d\n", *ptr2);
+    }
+
+    return 0;
+}
